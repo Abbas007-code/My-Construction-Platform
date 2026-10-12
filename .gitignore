@@ -1,0 +1,49 @@
+# My Construction Platform: .gitignore (prepared before the first commit; review before use)
+
+# Secrets and credentials: never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+secrets/
+credentials*.json
+service-account*.json
+supabase/.env
+supabase/.temp/
+supabase/.branches/
+
+# Local database and tooling
+supabase/.volumes/
+*.dump
+*.sql.gz
+*.bak
+
+# Dependencies and build output (for the future application)
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+.vercel/
+.turbo/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor, OS and scratch files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.log
+tmp/
+scratch/
